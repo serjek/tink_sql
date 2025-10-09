@@ -252,7 +252,7 @@ class MySqlConnection<Db> implements Connection<Db> implements Sanitizer {
   }
 }
 
-@:jsRequire("mysql")
+@:jsRequire("mysql2")
 private extern class NativeDriver {
   static function escape(value:Any):String;
   static function escapeId(ident:String):String;
