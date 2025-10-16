@@ -58,7 +58,7 @@ class ResultParser<Db> {
         else if (Std.is(value, Bytes)) parseGeometryValue(value)
         else value;
       case ExprType.VJson:
-        haxe.Json.parse(value);
+        try haxe.Json.parse(value) catch(e) value;
       default: value;
     }
   }
