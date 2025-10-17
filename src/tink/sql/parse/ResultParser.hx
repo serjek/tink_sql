@@ -59,7 +59,7 @@ class ResultParser<Db> {
         else value;
       case ExprType.VJson:
         //see https://sidorares.github.io/node-mysql2/docs/documentation#known-incompatibilities-with-node-mysql
-        try haxe.Json.parse(value) catch(e) value;
+        value;
       default: value;
     }
   }
